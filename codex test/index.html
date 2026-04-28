@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Tetris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="game-card">
+      <div class="marquee">
+        <span>Insert Coin</span>
+        <span>Neon Stack Arena</span>
+        <span>1 Player</span>
+      </div>
+
+      <div class="game-header">
+        <div>
+          <p class="eyebrow">Retro Cabinet Mode</p>
+          <h1>Mini Tetris</h1>
+        </div>
+        <button id="toggleButton" class="primary-button" type="button">Start Game</button>
+      </div>
+
+      <div class="game-shell">
+        <div class="playfield-frame">
+          <div class="screen-top">
+            <span>Player 1</span>
+            <span class="screen-lamp">Live</span>
+          </div>
+          <canvas id="game" width="300" height="600" aria-label="Tetris board"></canvas>
+          <div class="screen-bottom">
+            <span>Zone 01</span>
+            <span>WASD Control</span>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <div class="panel score-panel">
+            <p class="panel-label">Score</p>
+            <strong id="score">0</strong>
+          </div>
+          <div class="panel">
+            <p class="panel-label">Lines</p>
+            <strong id="lines">0</strong>
+          </div>
+          <div class="panel">
+            <p class="panel-label">Level</p>
+            <strong id="level">1</strong>
+          </div>
+          <div class="panel status-panel">
+            <p class="panel-label">Status</p>
+            <strong id="status">Ready</strong>
+          </div>
+          <div class="panel help">
+            <p class="panel-label">Controls</p>
+            <p>Move: A / D</p>
+            <p>Rotate: W</p>
+            <p>Soft Drop: S</p>
+            <p>Hard Drop: Space</p>
+            <p>Pause: P</p>
+            <p>Swipe: Left / Right / Up / Down</p>
+          </div>
+          <div class="panel leaderboard">
+            <p class="panel-label">Top 5 Scores</p>
+            <ol id="scoreHistory" class="score-history">
+              <li>No scores yet</li>
+            </ol>
+          </div>
+        </aside>
+      </div>
+
+      <div class="mobile-controls" aria-label="Touch controls">
+        <button data-action="left" type="button">Left</button>
+        <button data-action="rotate" type="button">Rotate</button>
+        <button data-action="right" type="button">Right</button>
+        <button data-action="down" type="button">Down</button>
+        <button data-action="drop" type="button">Drop</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
